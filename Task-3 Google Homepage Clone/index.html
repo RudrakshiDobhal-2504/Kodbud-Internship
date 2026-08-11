@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A responsive Google homepage clone built using HTML, CSS and JavaScript."
+    >
+
+    <title>Google Clone</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="top-header">
+
+        <nav class="top-nav">
+
+            <div class="nav-left">
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Store</a>
+            </div>
+
+            <div class="nav-right">
+
+                <a href="#" class="nav-link desktop-link">
+                    Gmail
+                </a>
+
+                <a href="#" class="nav-link desktop-link">
+                    Images
+                </a>
+
+                <!-- Theme Button -->
+                <button
+                    class="icon-button"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode"
+                    title="Toggle theme"
+                >
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- Google Apps -->
+                <button
+                    class="apps-button"
+                    aria-label="Google Apps"
+                    title="Google Apps"
+                >
+                    <i class="fa-solid fa-grip"></i>
+                </button>
+
+                <!-- Profile -->
+                <button
+                    class="profile-button"
+                    aria-label="Google Account"
+                    title="Google Account"
+                >
+                    R
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- Google Logo -->
+
+        <div class="google-logo" aria-label="Google">
+            <span class="blue">G</span>
+            <span class="red">o</span>
+            <span class="yellow">o</span>
+            <span class="blue">g</span>
+            <span class="green">l</span>
+            <span class="red">e</span>
+        </div>
+
+
+        <!-- Search Area -->
+
+        <div class="search-area">
+
+            <div class="search-box">
+
+                <!-- Search Icon -->
+
+                <span class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+
+
+                <!-- Search Input -->
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Search Google or type a URL"
+                    autocomplete="off"
+                    aria-label="Search"
+                >
+
+
+                <!-- Clear Button -->
+
+                <button
+                    id="clearButton"
+                    class="search-action hidden"
+                    aria-label="Clear search"
+                    title="Clear"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+
+                <!-- Microphone -->
+
+                <button
+                    class="search-action"
+                    id="voiceButton"
+                    aria-label="Voice Search"
+                    title="Voice Search"
+                >
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+
+
+                <!-- Camera -->
+
+                <button
+                    class="search-action"
+                    id="lensButton"
+                    aria-label="Search by image"
+                    title="Search by image"
+                >
+                    <i class="fa-solid fa-camera"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Search Buttons -->
+
+            <div class="search-buttons">
+
+                <button
+                    class="google-button"
+                    id="searchButton"
+                >
+                    Google Search
+                </button>
+
+                <button
+                    class="google-button"
+                    id="luckyButton"
+                >
+                    I'm Feeling Lucky
+                </button>
+
+            </div>
+
+
+            <!-- Language Section -->
+
+            <div class="language-section">
+
+                <span>
+                    Google offered in:
+                </span>
+
+                <a href="#">हिन्दी</a>
+                <a href="#">বাংলা</a>
+                <a href="#">తెలుగు</a>
+                <a href="#">मराठी</a>
+                <a href="#">தமிழ்</a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <!-- Country -->
+
+        <div class="footer-country">
+            India
+        </div>
+
+
+        <!-- Footer Links -->
+
+        <div class="footer-links">
+
+            <div class="footer-left">
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Business
+                </a>
+
+                <a href="#">
+                    How Search works
+                </a>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Settings
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

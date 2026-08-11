@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Professional contact form with JavaScript form validation."
+    >
+
+    <meta
+        name="author"
+        content="Rudrakshi Dobhal"
+    >
+
+    <title>ConnectWithMe | Contact Form</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a
+                href="#"
+                class="logo"
+            >
+                <span class="logo-icon">
+                    &lt;/&gt;
+                </span>
+                <span>
+                    Connect<span>WithMe</span>
+                </span>
+            </a>
+
+            <div class="nav-label">
+                Available for opportunities
+                <span class="status-dot"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+
+                <div class="intro-content">
+                    <p class="eyebrow">
+                        LET'S CONNECT
+                    </p>
+                    <h1>
+                        Let's build
+                        <span>something great.</span>
+                    </h1>
+                    <p class="intro-text">
+
+                        Have a project, internship opportunity,
+                        collaboration idea, or simply want to say hello?
+
+                        Fill out the form and send me a message.
+                    </p>
+
+                    <div class="info-list">
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                ✉
+                            </div>
+                            <div>
+                                <span>
+                                    Email
+                                </span>
+                                <strong>
+                                    rudrakshidobhal6@gmail.com
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                ☎
+                            </div>
+                            <div>
+                                <span>
+                                    Phone
+                                </span>
+                                <strong>
+                                    Available on request
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                ◎
+                            </div>
+                            <div>
+                                <span>
+                                    Location
+                                </span>
+                                <strong>
+                                    India
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="availability-note">
+                        <span class="check-icon">
+                            ✓
+                        </span>
+                        Usually responds within 24–48 hours
+                    </div>
+                </div>
+
+                <div class="form-card">
+
+                    <div class="form-header">
+                        <p class="form-label">
+                            SEND A MESSAGE
+                        </p>
+                        <h2>
+                            Tell me about your idea.
+                        </h2>
+                        <p>
+                            All fields are required unless mentioned otherwise.
+                        </p>
+                    </div>
+
+                    <div
+                        id="successMessage"
+                        class="success-message"
+                        role="alert"
+                        aria-live="polite"
+                    >
+                        <span class="success-icon">
+                            ✓
+                        </span>
+                        <div>
+                            <strong>
+                                Message sent successfully!
+                            </strong>
+                            <p>
+                                Thank you for reaching out.
+                                I'll get back to you soon.
+                            </p>
+                        </div>
+                    </div>
+
+                    <form
+                        id="contactForm"
+                        novalidate
+                    >
+
+                        <div class="form-group">
+                            <label for="name">
+                                Full Name
+                                <span>
+                                    *
+                                </span>
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">
+                                    ◉
+                                </span>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                >
+                            </div>
+                            <small
+                                class="error-message"
+                                id="nameError"
+                            ></small>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="email">
+                                    Email Address
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">
+                                        @
+                                    </span>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                    >
+                                </div>
+                                <small
+                                    class="error-message"
+                                    id="emailError"
+                                ></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">
+                                    Phone Number
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">
+                                        ☎
+                                    </span>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="10-digit number"
+                                        maxlength="10"
+                                        autocomplete="tel"
+                                    >
+                                </div>
+                                <small
+                                    class="error-message"
+                                    id="phoneError"
+                                ></small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label-row">
+                                <label for="message">
+                                    Message
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <span
+                                    id="characterCount"
+                                    class="character-count"
+                                >
+                                    0 / 500
+                                </span>
+                            </div>
+                            <div class="textarea-wrapper">
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    placeholder="Tell me about your project, opportunity, or idea..."
+                                    maxlength="500"
+                                    rows="6"
+                                ></textarea>
+                            </div>
+                            <small
+                                class="error-message"
+                                id="messageError"
+                            ></small>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="submit-button"
+                            id="submitButton"
+                        >
+                            <span>
+                                Send Message
+                            </span>
+                            <span class="arrow">
+                                →
+                            </span>
+                        </button>
+                        <p class="privacy-note">
+
+                            Your information is only used to respond
+                            to your message.
+
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <span class="logo-icon">
+                    &lt;/&gt;
+                </span>
+                <span>
+                    Connect<span>WithMe</span>
+                </span>
+            </div>
+            <p>
+                Let's turn good ideas into meaningful digital experiences.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>
+                EXPLORE
+            </h4>
+            <a href="#">
+                Home
+            </a>
+            <a href="#contact">
+                Contact
+            </a>
+        </div>
+        <div class="footer-column">
+            <h4>
+                CONNECT
+            </h4>
+            <a
+                href="mailto:rudrakshidobhal6@gmail.com"
+            >
+                Email
+            </a>
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                Rudrakshi Dobhal · All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

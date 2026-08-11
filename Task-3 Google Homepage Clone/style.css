@@ -1,0 +1,675 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #ffffff;
+    --text: #202124;
+    --secondary-text: #5f6368;
+    --border: #dfe1e5;
+    --button-bg: #f8f9fa;
+    --button-border: #f8f9fa;
+    --footer-bg: #f2f2f2;
+    --hover-bg: #f1f3f4;
+    --shadow: rgba(32, 33, 36, 0.18);
+}
+
+body.dark-mode {
+    --background: #202124;
+    --text: #e8eaed;
+    --secondary-text: #bdc1c6;
+    --border: #5f6368;
+    --button-bg: #303134;
+    --button-border: #303134;
+    --footer-bg: #171717;
+    --hover-bg: #3c4043;
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family: "Google Sans", Arial, sans-serif;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.top-header {
+    width: 100%;
+}
+
+.top-nav {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 24px;
+}
+
+
+/* LEFT NAVIGATION */
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    gap: 20px;
+}
+
+.nav-right {
+    gap: 18px;
+}
+
+
+/* NAV LINKS */
+
+.nav-link {
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease,
+        text-decoration 0.2s ease;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   ICON BUTTONS
+========================================= */
+
+.icon-button,
+.apps-button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    color: var(--secondary-text);
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.icon-button:hover,
+.apps-button:hover {
+    background: var(--hover-bg);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   PROFILE BUTTON
+========================================= */
+
+.profile-button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #1a73e8;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.profile-button:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 2px 8px rgba(26, 115, 232, 0.35);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding-top: 105px;
+}
+
+
+/* =========================================
+   GOOGLE LOGO
+========================================= */
+
+.google-logo {
+    display: flex;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(72px, 9vw, 92px);
+
+    font-weight: 500;
+
+    letter-spacing: -7px;
+
+    line-height: 1;
+
+    user-select: none;
+
+    margin-bottom: 38px;
+}
+
+
+/* GOOGLE COLORS */
+
+.google-logo .blue {
+    color: #4285f4;
+}
+
+.google-logo .red {
+    color: #ea4335;
+}
+
+.google-logo .yellow {
+    color: #fbbc05;
+}
+
+.google-logo .green {
+    color: #34a853;
+}
+
+
+/* =========================================
+   SEARCH AREA
+========================================= */
+
+.search-area {
+    width: min(100% - 40px, 650px);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.search-box {
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    background: var(--background);
+
+    transition:
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* SEARCH BOX HOVER */
+
+.search-box:hover {
+    border-color: transparent;
+
+    box-shadow:
+        0 1px 6px var(--shadow);
+}
+
+
+/* SEARCH BOX FOCUS */
+
+.search-box:focus-within {
+    border-color: transparent;
+
+    box-shadow:
+        0 1px 6px var(--shadow);
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.search-icon {
+    width: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--secondary-text);
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.search-input {
+    flex: 1;
+
+    height: 44px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    padding: 0 10px;
+}
+
+.search-input::placeholder {
+    color: var(--secondary-text);
+}
+
+
+/* =========================================
+   SEARCH ACTION BUTTONS
+========================================= */
+
+.search-action {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #4285f4;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.search-action:hover {
+    background: var(--hover-bg);
+
+    transform: scale(1.05);
+}
+
+
+/* HIDDEN ELEMENT */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   SEARCH BUTTONS
+========================================= */
+
+.search-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.google-button {
+    border: 1px solid var(--button-border);
+
+    background: var(--button-bg);
+
+    color: var(--text);
+
+    padding: 11px 18px;
+
+    border-radius: 4px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.google-button:hover {
+    border-color: #dadce0;
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1);
+
+    transform: translateY(-1px);
+}
+
+.google-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   LANGUAGE SECTION
+========================================= */
+
+.language-section {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    font-size: 13px;
+}
+
+.language-section span {
+    color: var(--secondary-text);
+}
+
+.language-section a {
+    color: #1a0dab;
+
+    text-decoration: none;
+}
+
+body.dark-mode .language-section a {
+    color: #8ab4f8;
+}
+
+.language-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+
+    background: var(--footer-bg);
+
+    color: var(--secondary-text);
+
+    margin-top: 30px;
+}
+
+
+/* COUNTRY */
+
+.footer-country {
+    padding: 15px 30px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 15px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    min-height: 48px;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.footer a {
+    color: var(--secondary-text);
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .top-nav {
+        padding: 15px 16px;
+    }
+
+    .nav-left {
+        gap: 14px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .desktop-link {
+        display: none;
+    }
+
+    .main-content {
+        padding-top: 85px;
+    }
+
+    .google-logo {
+        font-size: clamp(58px, 18vw, 80px);
+
+        margin-bottom: 30px;
+    }
+
+    .search-area {
+        width: calc(100% - 32px);
+    }
+
+    .search-buttons {
+        margin-top: 25px;
+    }
+
+    .language-section {
+        padding: 0 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 16px 20px;
+
+        gap: 14px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding-top: 65px;
+    }
+
+    .google-logo {
+        font-size: 62px;
+
+        letter-spacing: -5px;
+    }
+
+    .search-box {
+        min-height: 46px;
+
+        padding: 0 9px;
+    }
+
+    .search-input {
+        font-size: 14px;
+
+        padding: 0 6px;
+    }
+
+    .search-action {
+        width: 32px;
+        height: 32px;
+
+        font-size: 14px;
+    }
+
+    .search-buttons {
+        gap: 8px;
+    }
+
+    .google-button {
+        padding: 10px 13px;
+
+        font-size: 13px;
+    }
+
+    .language-section {
+        font-size: 12px;
+    }
+
+    .footer-country {
+        padding: 14px 20px;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(66, 133, 244, 0.35);
+
+    outline-offset: 2px;
+}
