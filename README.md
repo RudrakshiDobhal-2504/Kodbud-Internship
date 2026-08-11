@@ -142,4 +142,3 @@ KodBud-Web-Development-Internship/
 │   ├── script.js
 │   └── images/
 │
-└── README.md
